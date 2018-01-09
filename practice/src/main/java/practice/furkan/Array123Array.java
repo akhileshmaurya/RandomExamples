@@ -1,7 +1,5 @@
 package practice.furkan;
 
-import java.util.Iterator;
-
 public class Array123Array {
 
 	public static void main(String[] args) {
