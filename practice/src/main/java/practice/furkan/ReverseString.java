@@ -6,14 +6,28 @@ import java.io.InputStreamReader;
 public class ReverseString {
 
 	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String input = br.readLine();
-		char[] output = new char[input.length()];
+		X a= new X();
+		Y b= new Y();
+		Class o= b.getClass();
+		System.out.println(o.isLocalClass());
 
-		for (int i = 0; i < input.length(); i++) {
-			output[input.length() - 1 - i] = input.charAt(i);
-		}
-		System.out.println(String.valueOf(output));
 	}
 
+	public String test() {
+		try {
+			System.out.println("one");
+			return "";
+		} finally {
+			System.out.println("one11");
+		}
+	}
+
+}
+
+class X{
+	int a;
+	double b;
+}
+class Y extends X{
+	int c;
 }
