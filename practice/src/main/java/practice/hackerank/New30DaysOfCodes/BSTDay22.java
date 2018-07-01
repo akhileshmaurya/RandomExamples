@@ -1,35 +1,15 @@
 package practice.hackerank.New30DaysOfCodes;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
-class NodeBST {
-	NodeBST left, right;
-	int data;
+public class BSTDay22 {
 
-	NodeBST(int data) {
-		this.data = data;
-		left = right = null;
-	}
-}
+	public static int getHeight(NodeBST root) {
 
-public class LevelOrderTraversalBST {
+		if (root == null)
+			return -1;
 
-	static void levelOrder(NodeBST root) {
-		Queue<NodeBST> queue = new LinkedList<NodeBST>();
-		queue.add(root);
-		while (!queue.isEmpty()) {
-			NodeBST tmp = queue.poll();
-			if (tmp != null) {
-				System.out.print(tmp.data + " ");
-				if (tmp.left != null)
-					queue.add(tmp.left);
-				if (tmp.right != null)
-					queue.add(tmp.right);
-			}
-		}
-
+		return 1 + Math.max(getHeight(root.left), getHeight(root.right));
 	}
 
 	public static NodeBST insert(NodeBST root, int data) {
@@ -56,7 +36,7 @@ public class LevelOrderTraversalBST {
 			int data = sc.nextInt();
 			root = insert(root, data);
 		}
-		levelOrder(root);
-		sc.close();
+		int height = getHeight(root);
+		System.out.println(height);
 	}
 }
