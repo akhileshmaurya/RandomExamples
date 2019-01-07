@@ -1,33 +1,37 @@
+
 package practice.furkan;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
+@SuppressWarnings("rawtypes")
 public class ReverseString {
 
-	public static void main(String[] args) throws Exception {
-		X a= new X();
-		Y b= new Y();
-		Class o= b.getClass();
-		System.out.println(o.isLocalClass());
+  public static void main(String[] args) throws Exception {
+    X a = new X();
+    Y b = new Y();
 
-	}
+    System.out.println(" a :" + a);
+    Class o = b.getClass();
+    System.out.println(o.isLocalClass());
 
-	public String test() {
-		try {
-			System.out.println("one");
-			return "";
-		} finally {
-			System.out.println("one11");
-		}
-	}
+  }
+
+  public String test() {
+    try {
+      System.out.println("one");
+      return "";
+    } finally {
+      System.out.println("one11");
+    }
+  }
 
 }
 
-class X{
-	int a;
-	double b;
+
+class X {
+  int a;
+  double b;
 }
-class Y extends X{
-	int c;
+
+
+class Y extends X {
+  int c;
 }

@@ -4,9 +4,7 @@
 	<groupId>practice</groupId>
 	<artifactId>practice</artifactId>
 	<version>1.0.0</version>
-
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+	<dependencies>	
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
